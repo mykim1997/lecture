@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/* 모든 디바이스*/
+body{
+  background-color:yellow;
+  margin:0;
+}
+figure{
+  margin:0;
+  padding:0;
+}
+.img-wrap img{
+  width:100%;
+  height:auto;
+}
+
+/*모바일 디바이스 - 1픽셀부터 599픽셀 까지 */
+@media screen and (min-width:1px) and (max-width:599px){
+  body{
+    background-color:pink;
+  }
+  .img-wrap{
+    margin: 1em;
+  }
+}
+
+/* 태블릿 디바이스 - 600픽셀부터 1024픽셀 까지*/
+@media screen and (min-width:600px) and (max-width:1024px){
+  body{
+    background-color:orange;
+  }
+  .wrap-container{
+    display:flex;
+    flex-wrap:wrap;
+    /*flex를 지정했으면 flex-wrap을 설정해야 함*/
+  }
+  .img-wrap{
+    width:50%;
+    padding:1em;
+    box-sizing:border-box;
+  }
+}
+
+
+/* 데스크탑 디바이스 - 1025픽셀 이상*/
+@media screen and (min-width:1025px) {
+  body{
+    background-color:aqua;
+  }
+  .wrap-container{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .img-wrap{
+    width:33.3333333333%;
+    
+  }
+}
