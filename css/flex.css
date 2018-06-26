@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.wrap{
+  background:yellow;
+  width: 1000px;
+  height:500px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:row; /* 메인축 정렬. row 가로 column 세로 */
+  justify-content: space-evenly;
+  /* flex-start:왼쪽정렬 flex-end:오른쪽정렬 center:가운데정렬 */
+  /*  space-around:요소들 주위를 동일하게 정렬 space-between:요소들 사이를 동일하게 정렬 space-evenly:중간중간 여백을 동일하게 정렬 */
+ /* justify-content:메인축 기준으로 이동  align-items:교차축 기준으로 이동*/
+}
+
+.wrap div{
+  background:pink;
+   /* flex-basis:300px;/* 사이즈가 넘어가면 자동으로 250px로 축소 */
+   /* flex-shrink:0; /* 축소 비율*/
+  flex-basis: 100px; /* 사이즈가 부족하면 자동으로 사이즈를 100%로 채워줌*/
+}
+
+
+.w1{
+  order:1;
+  flex-shrink: 1;  /* 250 px*/
+  flex-grow:2;
+}
+.w2{
+ flex-shrink: 2; /* 200px */
+  flex-grow: 3; /* 400px */
+}
+.w3{
+  order:-1;
+  flex-shrink:0; /* 300px */
+  flex-grow:0; /* 100px */
+}
+.w4{
+  flex-shrink: 1; /* 250px */
+  flex-grow:1; 
+}
