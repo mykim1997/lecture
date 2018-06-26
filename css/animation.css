@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+@keyframes text-ani{
+  /*시작*/
+  0%{
+    font-size:16px;
+    color:rgba(255,0,0,0);
+    top:0;
+    left:0;
+    opacity: 1;
+  }
+  /*끝*/
+  100%{
+    font-size:48px;
+    color:rgba(0,0,255,1);
+    top:150px;
+    left:450px;
+    opacity: 1;
+  }
+}
+
+
+.text-wrap{
+  background:yellow;
+  width:1000px;
+  height:300px;
+  margin: 0 auto;
+  position:relative; /* 없으면 .text가 body 기주으로 배치됨*/
+}
+
+.text{
+  background: pink;
+  position: absolute;
+  opacity: 0;
+  animation-name:text-ani; /* 지정할 애니메이션 이름 */
+  animation-duration: 5s; /* 애니메이션 시간 */
+  animation-fill-mode: forwards; /* 애니메이션 원래대로 돌아가는거 막아줌 */
+  animation-timing-function: ease-in-out; /* 애니메이션 진행 가속도 강약조절 */
+  animation-iteration-count: infinite; /* 반복 될 횟수 */
+  animation-direction: alternate; /* 진행방향 */
+  animation-delay: 5s; /* 지정한 시간이 지나면 애니메이션 재생시작*/
+  /* animation-play-state: paused; /* 애니메이션 정지. 자바스크립트랑 함께 쓰임 */
+ 
+  /* 단축 표기법 */
+  /* animation: text-ani 5s forwards ease-in-out infinite alternate; */
+}
+
+@keyframes img-ani{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(700px);
+  }
+}
+
+.img-wrap{
+  background:pink;
+  padding:50px;
+}
+
+.neo{
+  animation: img-ani 3000ms forwards 3 alternate;
+}
